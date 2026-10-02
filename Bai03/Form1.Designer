@@ -1,0 +1,414 @@
+﻿namespace WINFORMSGUI
+{
+    partial class Form1
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuFile;
+        private System.Windows.Forms.ToolStripMenuItem menuExport;
+        private System.Windows.Forms.ToolStripMenuItem menuExit;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelLeft;
+
+        private System.Windows.Forms.Label lblProductId;
+        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblUnitPrice;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblSearch;
+
+        private System.Windows.Forms.TextBox txtProductId;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TextBox txtUnitPrice;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtSearch;
+
+        private System.Windows.Forms.ComboBox cboCategory;
+
+        private System.Windows.Forms.PictureBox picAvatar;
+        private System.Windows.Forms.Button btnChooseImage;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnExport;
+
+        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
+
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+                components.Dispose();
+
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            menuStrip1 = new MenuStrip();
+            menuFile = new ToolStripMenuItem();
+            menuExport = new ToolStripMenuItem();
+            menuExit = new ToolStripMenuItem();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanelLeft = new TableLayoutPanel();
+            lblProductId = new Label();
+            txtProductId = new TextBox();
+            lblProductName = new Label();
+            txtProductName = new TextBox();
+            lblCategory = new Label();
+            cboCategory = new ComboBox();
+            lblUnitPrice = new Label();
+            txtUnitPrice = new TextBox();
+            lblQuantity = new Label();
+            txtQuantity = new TextBox();
+            picAvatar = new PictureBox();
+            btnChooseImage = new Button();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            btnExport = new Button();
+            lblSearch = new Label();
+            txtSearch = new TextBox();
+            dgvProducts = new DataGridView();
+            errorProvider1 = new ErrorProvider(components);
+            statusStrip1 = new StatusStrip();
+            lblStatus = new ToolStripStatusLabel();
+            menuStrip1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            statusStrip1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuFile });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1106, 24);
+            menuStrip1.TabIndex = 2;
+            // 
+            // menuFile
+            // 
+            menuFile.DropDownItems.AddRange(new ToolStripItem[] { menuExport, menuExit });
+            menuFile.Name = "menuFile";
+            menuFile.Size = new Size(37, 20);
+            menuFile.Text = "File";
+            // 
+            // menuExport
+            // 
+            menuExport.Name = "menuExport";
+            menuExport.ShortcutKeys = Keys.Control | Keys.E;
+            menuExport.Size = new Size(171, 22);
+            menuExport.Text = "Export CSV";
+            menuExport.Click += menuExport_Click;
+            // 
+            // menuExit
+            // 
+            menuExit.Name = "menuExit";
+            menuExit.ShortcutKeys = Keys.Control | Keys.X;
+            menuExit.Size = new Size(171, 22);
+            menuExit.Text = "Exit";
+            menuExit.Click += menuExit_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
+            tableLayoutPanel1.Controls.Add(tableLayoutPanelLeft, 0, 0);
+            tableLayoutPanel1.Controls.Add(dgvProducts, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 24);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(1106, 604);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanelLeft
+            // 
+            tableLayoutPanelLeft.ColumnCount = 2;
+            tableLayoutPanelLeft.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
+            tableLayoutPanelLeft.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
+            tableLayoutPanelLeft.Controls.Add(lblProductId, 0, 0);
+            tableLayoutPanelLeft.Controls.Add(txtProductId, 1, 0);
+            tableLayoutPanelLeft.Controls.Add(lblProductName, 0, 1);
+            tableLayoutPanelLeft.Controls.Add(txtProductName, 1, 1);
+            tableLayoutPanelLeft.Controls.Add(lblCategory, 0, 2);
+            tableLayoutPanelLeft.Controls.Add(cboCategory, 1, 2);
+            tableLayoutPanelLeft.Controls.Add(lblUnitPrice, 0, 3);
+            tableLayoutPanelLeft.Controls.Add(txtUnitPrice, 1, 3);
+            tableLayoutPanelLeft.Controls.Add(lblQuantity, 0, 4);
+            tableLayoutPanelLeft.Controls.Add(txtQuantity, 1, 4);
+            tableLayoutPanelLeft.Controls.Add(picAvatar, 0, 5);
+            tableLayoutPanelLeft.Controls.Add(btnChooseImage, 0, 6);
+            tableLayoutPanelLeft.Controls.Add(btnAdd, 0, 7);
+            tableLayoutPanelLeft.Controls.Add(btnUpdate, 1, 7);
+            tableLayoutPanelLeft.Controls.Add(btnDelete, 0, 8);
+            tableLayoutPanelLeft.Controls.Add(btnExport, 1, 8);
+            tableLayoutPanelLeft.Controls.Add(lblSearch, 0, 9);
+            tableLayoutPanelLeft.Controls.Add(txtSearch, 1, 9);
+            tableLayoutPanelLeft.Dock = DockStyle.Fill;
+            tableLayoutPanelLeft.Location = new Point(3, 3);
+            tableLayoutPanelLeft.Name = "tableLayoutPanelLeft";
+            tableLayoutPanelLeft.RowCount = 10;
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 150F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanelLeft.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanelLeft.Size = new Size(381, 598);
+            tableLayoutPanelLeft.TabIndex = 0;
+            // 
+            // lblProductId
+            // 
+            lblProductId.Dock = DockStyle.Fill;
+            lblProductId.Location = new Point(3, 0);
+            lblProductId.Name = "lblProductId";
+            lblProductId.Size = new Size(127, 35);
+            lblProductId.TabIndex = 0;
+            lblProductId.Text = "Ma SP";
+            lblProductId.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtProductId
+            // 
+            txtProductId.Dock = DockStyle.Fill;
+            txtProductId.Location = new Point(136, 3);
+            txtProductId.Name = "txtProductId";
+            txtProductId.Size = new Size(242, 23);
+            txtProductId.TabIndex = 1;
+            // 
+            // lblProductName
+            // 
+            lblProductName.Dock = DockStyle.Fill;
+            lblProductName.Location = new Point(3, 35);
+            lblProductName.Name = "lblProductName";
+            lblProductName.Size = new Size(127, 35);
+            lblProductName.TabIndex = 2;
+            lblProductName.Text = "Ten SP";
+            lblProductName.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtProductName
+            // 
+            txtProductName.Dock = DockStyle.Fill;
+            txtProductName.Location = new Point(136, 38);
+            txtProductName.Name = "txtProductName";
+            txtProductName.Size = new Size(242, 23);
+            txtProductName.TabIndex = 3;
+            // 
+            // lblCategory
+            // 
+            lblCategory.Dock = DockStyle.Fill;
+            lblCategory.Location = new Point(3, 70);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(127, 35);
+            lblCategory.TabIndex = 4;
+            lblCategory.Text = "Danh muc";
+            lblCategory.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // cboCategory
+            // 
+            cboCategory.Dock = DockStyle.Fill;
+            cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCategory.Location = new Point(136, 73);
+            cboCategory.Name = "cboCategory";
+            cboCategory.Size = new Size(242, 23);
+            cboCategory.TabIndex = 5;
+            // 
+            // lblUnitPrice
+            // 
+            lblUnitPrice.Dock = DockStyle.Fill;
+            lblUnitPrice.Location = new Point(3, 105);
+            lblUnitPrice.Name = "lblUnitPrice";
+            lblUnitPrice.Size = new Size(127, 35);
+            lblUnitPrice.TabIndex = 6;
+            lblUnitPrice.Text = "Don gia";
+            lblUnitPrice.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtUnitPrice
+            // 
+            txtUnitPrice.Dock = DockStyle.Fill;
+            txtUnitPrice.Location = new Point(136, 108);
+            txtUnitPrice.Name = "txtUnitPrice";
+            txtUnitPrice.Size = new Size(242, 23);
+            txtUnitPrice.TabIndex = 7;
+            // 
+            // lblQuantity
+            // 
+            lblQuantity.Dock = DockStyle.Fill;
+            lblQuantity.Location = new Point(3, 140);
+            lblQuantity.Name = "lblQuantity";
+            lblQuantity.Size = new Size(127, 35);
+            lblQuantity.TabIndex = 8;
+            lblQuantity.Text = "So luong";
+            lblQuantity.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtQuantity
+            // 
+            txtQuantity.Dock = DockStyle.Fill;
+            txtQuantity.Location = new Point(136, 143);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(242, 23);
+            txtQuantity.TabIndex = 9;
+            // 
+            // picAvatar
+            // 
+            picAvatar.BorderStyle = BorderStyle.FixedSingle;
+            tableLayoutPanelLeft.SetColumnSpan(picAvatar, 2);
+            picAvatar.Dock = DockStyle.Fill;
+            picAvatar.Location = new Point(3, 178);
+            picAvatar.Name = "picAvatar";
+            picAvatar.Size = new Size(375, 144);
+            picAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            picAvatar.TabIndex = 10;
+            picAvatar.TabStop = false;
+            // 
+            // btnChooseImage
+            // 
+            tableLayoutPanelLeft.SetColumnSpan(btnChooseImage, 2);
+            btnChooseImage.Dock = DockStyle.Fill;
+            btnChooseImage.Location = new Point(3, 328);
+            btnChooseImage.Name = "btnChooseImage";
+            btnChooseImage.Size = new Size(375, 29);
+            btnChooseImage.TabIndex = 11;
+            btnChooseImage.Text = "Chon anh";
+            btnChooseImage.Click += btnChooseImage_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Dock = DockStyle.Fill;
+            btnAdd.Location = new Point(3, 363);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(127, 34);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "Them";
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Dock = DockStyle.Fill;
+            btnUpdate.Location = new Point(136, 363);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(242, 34);
+            btnUpdate.TabIndex = 13;
+            btnUpdate.Text = "Sua";
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Dock = DockStyle.Fill;
+            btnDelete.Location = new Point(3, 403);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(127, 34);
+            btnDelete.TabIndex = 14;
+            btnDelete.Text = "Xoa";
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnExport
+            // 
+            btnExport.Dock = DockStyle.Fill;
+            btnExport.Location = new Point(136, 403);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(242, 34);
+            btnExport.TabIndex = 15;
+            btnExport.Text = "Export CSV";
+            btnExport.Click += btnExport_Click;
+            // 
+            // lblSearch
+            // 
+            lblSearch.Dock = DockStyle.Fill;
+            lblSearch.Location = new Point(3, 440);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(127, 158);
+            lblSearch.TabIndex = 16;
+            lblSearch.Text = "Tim kiem";
+            lblSearch.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Dock = DockStyle.Fill;
+            txtSearch.Location = new Point(136, 443);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(242, 23);
+            txtSearch.TabIndex = 17;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            // 
+            // dgvProducts
+            // 
+            dgvProducts.AllowUserToAddRows = false;
+            dgvProducts.AllowUserToDeleteRows = false;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProducts.Dock = DockStyle.Fill;
+            dgvProducts.Location = new Point(390, 3);
+            dgvProducts.MultiSelect = false;
+            dgvProducts.Name = "dgvProducts";
+            dgvProducts.ReadOnly = true;
+            dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProducts.Size = new Size(713, 598);
+            dgvProducts.TabIndex = 1;
+            dgvProducts.CellClick += dgvProducts_CellClick;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatus });
+            statusStrip1.Location = new Point(0, 628);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(1106, 22);
+            statusStrip1.TabIndex = 1;
+            // 
+            // lblStatus
+            // 
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(116, 17);
+            lblStatus.Text = "Tong so san pham: 0";
+            // 
+            // Form1
+            // 
+            ClientSize = new Size(1106, 650);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(statusStrip1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(800, 500);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TechMart Product Manager";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanelLeft.ResumeLayout(false);
+            tableLayoutPanelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+    }
+}
